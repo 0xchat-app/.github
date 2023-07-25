@@ -9,7 +9,7 @@ Welcome to 0xChat⚡️
   - [0xchat on iOS](https://apps.apple.com/app/0xchat/id1637607169)
   - [0xchat on Android](https://play.google.com/store/apps/details?id=com.oxchat.nostr)
 
-![](./banner.jpeg)
+![](https://github.com/0xchat-app/.github/blob/main/profile/banner.jpeg)
 
 ## Features
 
