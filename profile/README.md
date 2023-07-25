@@ -13,15 +13,15 @@ Welcome to 0xChat⚡️
 
 ## Features
 
-### Encrypted Messages
+**Encrypted Messages**
 
 Our direct messages and friends list are secured with end-to-end encryption, ensuring your conversations stay between you and your contacts.
 
-### Open Channels
+**Open Channels**
 
 Explore the boundless realm of open channels with 0xchat. Find and join channels seamlessly, unlocking a world of communication with ease.
 
-### Badge Collections
+**Badge Collections**
 
 Make your 0xchat profile uniquely yours with our Badge Collection feature. Gather your favorite badges and proudly display them on your profile picture.
 
