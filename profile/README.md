@@ -48,7 +48,7 @@ flowchart LR
 
 
 ## Future Enhancements
-We continuously aim to improve and enhance the features provided by this repository. Stay tuned for future updates!
+We continuously aim to improve and enhance the features. Stay tuned for future updates!
 
 Some important planned features:
 
