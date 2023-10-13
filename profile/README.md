@@ -29,7 +29,7 @@ Explore the boundless realm of open channels with 0xchat. Find and join channels
 
 **Audio & Video Call**
 
-We offer audio and video calling capabilities between contacts. Signaling communication is carried out through Nostr relay using [NIP100](https://github.com/nostr-protocol/nips/blob/16d577fdf5e7fe1b25012919c6882efa1894319e/100.md). The actual audio and video calls are facilitated via ICE servers. Additionally, we allow users to select their own ICE servers if preferred.
+We offer audio and video calling capabilities between contacts. Signaling communication is carried out through Nostr relay using [NIP100](https://github.com/jacany/nips/blob/webrtc/100.md). The actual audio and video calls are facilitated via ICE servers. Additionally, we allow users to select their own ICE servers if preferred.
 
 **Badge Collections**
 
@@ -57,9 +57,9 @@ We continuously aim to improve and enhance the features. Stay tuned for future u
 
 Some important planned features:
 
-- [*] Threads, mentions, reactions
-- [*] Zap Red Envelopes between friends
-- [*] P2P audio/video calling
+- [x] Threads, mentions, reactions
+- [x] Zap Red Envelopes between friends
+- [x] P2P audio/video calling
 - [ ] Private group
 - [ ] Audio/video chat room
 - [ ] Lightning wallet Integration
