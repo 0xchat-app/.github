@@ -64,5 +64,5 @@ Some important planned features:
 - [ ] Audio/video chat room
 - [ ] Lightning wallet Integration
 - [ ] Private notes
-
+- [ ] Desktop&Tablets versions
 
