@@ -53,15 +53,13 @@ If you wish to protect your privacy further, you have the option to set up your 
 
 **Push Notifications**
 
-0xchat proposes a push notification method, involving sending and processing heartbeat signals to determine online status and ensure timely notifications.
-
-Spec link: [https://github.com/0xchat-app/0xchat-core/blob/main/doc/nofitications.md](https://github.com/0xchat-app/0xchat-core/blob/main/doc/nofitications.md)
+0xchat proposes a [push notification](https://github.com/0xchat-app/0xchat-core/blob/main/doc/nofitications.md) method for Nostr, where the push configuration is set up by sending DM messages to the push server. The push server then forwards the notifications to the corresponding distributor, which is responsible for relaying the push messages to the app.
 
 In the latest Android version, we have integrated [Unifiedpush](https://unifiedpush.org/) with an embedded FCM distributor, also allowing users to select their preferred distributor in the settings.
 
-**Private Payments**
+**Private Payment**
 
-We have integrated a Cashu wallet into the app, utilizing the Lightning Network for ecash deposits and withdrawals. Within the app, users can send Ecash to friends and group members. The Ecash is stored locally, anonymizing ownership and effectively protecting user privacy.
+For private payment, we have integrated a Cashu wallet into the app, utilizing the Lightning Network for ecash deposits and withdrawals. Within the app, users can send Ecash to friends and group members. The Ecash is stored locally, anonymizing ownership and effectively protecting user privacy.
 
 If you want to learn more about Cashu, please check [here](https://cashu.space/).
 
