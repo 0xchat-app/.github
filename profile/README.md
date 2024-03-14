@@ -17,27 +17,28 @@ Welcome to 0xChat⚡️
 
 **Secure DM**
 
-Currently, we support three types of direct messages (DMs):
+Currently, we support three types of direct messages (DMs), Please review the provided links for a deeper understanding of each DM type:
 
-- [Normal DM](https://github.com/nostr-protocol/nips/blob/master/04.md)
+- [NIP-04 DM](https://github.com/nostr-protocol/nips/blob/master/04.md)
 
-Nip04 DM is the most widely used DM type in nostr, but it is not our recommended option currently because nip04 is not private in terms of DMs. Even though the content is encrypted, it leaks a lot of metadata. We do not use this DM type by default but are compatible with Nip04 DM from other nostr clients.
+NIP-04 DM is the most widely used DM type in nostr, but it is not our recommended option currently because NIP-04 is not private in terms of DMs. Even though the content is encrypted, it leaks a lot of metadata. We do not use this DM type by default but are compatible with NIP-04 DM from other nostr clients.
 
 - [Gift-Wrapped DM](https://github.com/nostr-protocol/nips/blob/master/59.md)
 
-This is our default and recommended DM type. By using Gift-Wrapped for event messages, it minimizes metadata leakage. Not only is the message content encrypted, but the sender and the timestamp are also concealed. Moreover, the encryption algorithm employed is the latest audited [nip44](https://github.com/nostr-protocol/nips/blob/master/44.md) algorithm.
+This is our default and recommended DM type. By using Gift-Wrapped for event messages, it minimizes metadata leakage. Not only is the message content encrypted, but the sender and the timestamp are also concealed. Moreover, the encryption algorithm employed is the latest audited [NIP-44](https://github.com/nostr-protocol/nips/blob/master/44.md) algorithm.
 
 - [Secret DM](https://github.com/0xchat-app/0xchat-core/blob/main/doc/secretChat.md)
 
-Secret Chat is our third DM type, an extension of the Gift-Wrapped DM. Since Gift-Wrapped DM does not support forward secrecy, if a user's private key is compromised, all DM messages could be recovered. Therefore, we added a [nip101](https://github.com/water783/nips/blob/nip101/101.md) key exchange protocol to ensure each message session uses a different receiver key, securing forward secrecy. Additionally, we have incorporated the option to select a fixed relay for these sessions, allowing messages to be transmitted through a single trusted relay for both parties.
+Secret Chat is our third DM type, an extension of the Gift-Wrapped DM. Since Gift-Wrapped DM does not support forward secrecy, if a user's private key is compromised, all DM messages could be recovered. Therefore, we added a [NIP-101](https://github.com/water783/nips/blob/nip101/101.md) key exchange protocol to ensure each message session uses a different receiver key, securing forward secrecy. Additionally, we have incorporated the option to select a fixed relay for these sessions, allowing messages to be transmitted through a single trusted relay for both parties.
 
-Please review the provided links for a deeper understanding of each DM type.
+If you wish to recover your private chat messages on a different Nostr client or new device, we recommend using our default Gift-Wrapped DM. For more confidential conversations, you can initiate a Secret Chat with your friend, which requires their consent to establish a secret chat session. Please note that without backing up your chat database, you cannot retrieve historical messages if you switch devices or Nostr clients.
+
 
 **Private Group**
 
-For [private group](https://github.com/0xchat-app/0xchat-core/blob/main/doc/privateGroup.md), we combine [Nip28](https://github.com/nostr-protocol/nips/blob/master/28.md) and [Nip59](https://github.com/nostr-protocol/nips/blob/master/59.md) to support group member management, where group messages, processed through gift-wrapping, are sent to all group members, ensuring messages are received only by group members even with frequent joins and leaves.
+For [private group](https://github.com/0xchat-app/0xchat-core/blob/main/doc/privateGroup.md), we combine [NIP-28](https://github.com/nostr-protocol/nips/blob/master/28.md) and [NIP-59](https://github.com/nostr-protocol/nips/blob/master/59.md) to support group member management, where group messages, processed through gift-wrapping, are sent to all group members, ensuring messages are received only by group members even with frequent joins and leaves.
 
-Since our private group chats do not use a shared group private key, each group message is individually encrypted and sent to group members, which is not ideal for large groups. After testing, the 0xchat app, with a multi-threading approach, can support groups with fewer than 500 members.
+Since our private group chats do not use a shared group private key, each group message is individually encrypted and sent to group members, which is not ideal for large groups. After testing, the 0xchat app, with a multi-threading approach, can support groups well with fewer than 500 members.
 
 **Open Channels**
 
@@ -45,7 +46,10 @@ We also provide an open channels feature, compatible with other nostr clients. T
 
 **Audio & Video Call**
 
-We offer E2EE audio and video call functionalities between contacts. Signaling communication is conducted through Nostr relay using [NIP100](https://github.com/jacany/nips/blob/webrtc/100.md), with actual audio and video calls facilitated via ICE servers. Users can also choose their preferred ICE servers.
+We also offer E2EE audio and video call functionalities between contacts. Signaling communication is conducted through Nostr relay using [NIP-100](https://github.com/jacany/nips/blob/webrtc/100.md), with actual audio and video calls facilitated via ICE servers. 
+
+If you wish to protect your privacy further, you have the option to set up your own relay and ICE services. Within the 0xchat app, you can select these self-hosted services for your relay and ICE interactions. By doing so, both signaling and ICE services will only pass through your own infrastructure.
+
 
 **Push Notifications**
 
