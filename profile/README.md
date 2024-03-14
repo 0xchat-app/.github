@@ -61,7 +61,10 @@ In the latest Android version, we have integrated [Unifiedpush](https://unifiedp
 
 **Private Payments**
 
-We have integrated a cashu wallet into the app, utilizing the Lightning Network for ecash deposits and withdrawals. Within the app, users can send Ecash to friends and group members. The Ecash is stored locally, anonymizing ownership and effectively protecting user privacy.
+We have integrated a Cashu wallet into the app, utilizing the Lightning Network for ecash deposits and withdrawals. Within the app, users can send Ecash to friends and group members. The Ecash is stored locally, anonymizing ownership and effectively protecting user privacy.
+
+If you want to learn more about Cashu, please check [here](https://cashu.space/).
+
 
 **Badge Collections**
 
