@@ -2,18 +2,22 @@
 
 Welcome to 0xChat⚡️
 
-0xchat is a secure chat app built on the Nostr protocol. It prioritizes privacy, featuring private key login, encrypted private chats and contacts, encrypted group chats, and private payments([Cashu](https://cashu.space/)). Additionally, it also offers an open communication platform through public channels.
+0xchat is a secure chat app built on the [Nostr protocol](https://github.com/nostr-protocol/nips). It prioritizes privacy, featuring private key login, encrypted private chats and contacts, encrypted group chats, and private payments([Cashu](https://cashu.space/)). Additionally, it also offers an open communication platform through public channels.
 
 0xchat Download links:
 
   - [0xchat on Appstore](https://apps.apple.com/app/0xchat/id1637607169)
-  - [0xchat Testflight](https://testflight.apple.com/join/AjdJFBmU)
+  - [0xchat on Testflight](https://testflight.apple.com/join/AjdJFBmU)
   - [0xchat on Google play](https://play.google.com/store/apps/details?id=com.oxchat.nostr)
   - [0xchat APK download](https://github.com/0xchat-app/0xchat-app-main/releases)
 
 ![](https://github.com/0xchat-app/.github/blob/main/profile/banner.jpeg)
 
 ## Features
+
+**No Registration Required**
+
+As a chat client based on the [Nostr protocol](https://github.com/nostr-protocol/nips), we only require the creation of a Nostr account to log in; there is no need to register through a phone number, email, or any other means. You must safeguard your nsec key, as it allows you to control your own data. Additionally, your Nostr account is compatible with other Nostr clients.
 
 **Secure DM**
 
@@ -38,7 +42,7 @@ If you wish to recover your private chat messages on a different Nostr client or
 
 For [private group](https://github.com/0xchat-app/0xchat-core/blob/main/doc/privateGroup.md), we combine [NIP-28](https://github.com/nostr-protocol/nips/blob/master/28.md) and [NIP-59](https://github.com/nostr-protocol/nips/blob/master/59.md) to support group member management, where group messages, processed through gift-wrapping, are sent to all group members, ensuring messages are received only by group members even with frequent joins and leaves.
 
-Since our private group chats do not use a shared group private key, each group message is individually encrypted and sent to group members, which is not ideal for large groups. After testing, the 0xchat app, with a multi-threading approach, can support groups well with fewer than 500 members.
+Since our private group chats do not use a shared group private key, each group message is individually encrypted and sent to group members, which is not ideal for large groups. After testing, the 0xchat app, with a multi-threading approach, can support private groups well with fewer than 200 members.
 
 **Open Channels**
 
