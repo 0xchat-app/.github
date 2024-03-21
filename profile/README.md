@@ -2,7 +2,7 @@
 
 Welcome to 0xChat⚡️
 
-0xchat is a secure chat app built on the [Nostr protocol](https://github.com/nostr-protocol/nips). It prioritizes privacy, featuring private key login, encrypted private chats and contacts, encrypted group chats, and private payments([Cashu](https://cashu.space/)). Additionally, it also offers an open communication platform through public channels.
+0xchat is a secure chat app built on the [Nostr protocol](https://github.com/nostr-protocol/nips). It prioritizes security, featuring private key login, encrypted private chats and contacts, encrypted group chats, and lightning payments([Cashu](https://cashu.space/)). Additionally, it also offers an open communication platform through public channels.
 
 0xchat Download links:
 
@@ -61,9 +61,9 @@ If you wish to protect your privacy further, you have the option to set up your 
 
 In the latest Android version, we have integrated [Unifiedpush](https://unifiedpush.org/) with an embedded FCM distributor, also allowing users to select their preferred distributor in the settings.
 
-**Private Payment**
+**Lightning Payment ⚡️**
 
-For private payment, we have integrated a Cashu wallet into the app, utilizing the Lightning Network for ecash deposits and withdrawals. Within the app, users can send Ecash to friends and group members. The Ecash is stored locally, anonymizing ownership and effectively protecting user privacy.
+For lightning payment, we have integrated a Cashu wallet into the app, utilizing the Lightning Network for ecash deposits and withdrawals. Within the app, users can send Ecash to friends and group members. The Ecash is stored locally, anonymizing ownership and effectively protecting user privacy.
 
 If you want to learn more about Cashu, please check [here](https://cashu.space/).
 
