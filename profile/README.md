@@ -27,7 +27,7 @@ Currently, we support three types of direct messages (DMs), Please review the pr
 
 NIP-04 DM is the most widely used DM type in nostr, but it is not our recommended option currently because NIP-04 is not private in terms of DMs. Even though the content is encrypted, it leaks a lot of metadata. We do not use this DM type by default but are compatible with NIP-04 DM from other nostr clients.
 
-- [Gift-Wrapped DM](https://github.com/nostr-protocol/nips/blob/master/59.md)
+- [Gift-Wrapped DM](https://github.com/nostr-protocol/nips/blob/master/17.md)
 
 This is our default and recommended DM type. By using Gift-Wrapped for event messages, it minimizes metadata leakage. Not only is the message content encrypted, but the sender and the timestamp are also concealed. Moreover, the encryption algorithm employed is the latest audited [NIP-44](https://github.com/nostr-protocol/nips/blob/master/44.md) algorithm.
 
@@ -40,9 +40,15 @@ If you wish to recover your private chat messages on a different Nostr client or
 
 **Private Group**
 
-For [private group](https://github.com/0xchat-app/0xchat-core/blob/main/doc/privateGroup.md), we combine [NIP-28](https://github.com/nostr-protocol/nips/blob/master/28.md) and [NIP-59](https://github.com/nostr-protocol/nips/blob/master/59.md) to support group member management, where group messages, processed through gift-wrapping, are sent to all group members, ensuring messages are received only by group members even with frequent joins and leaves.
+For private groups, we use the [NIP-17](https://github.com/nostr-protocol/nips/blob/master/17.md) chat room to support group member management. In this setup, group messages are processed through gift-wrapping and sent to all group members, ensuring that messages are received only by group members.
 
-Since our private group chats do not use a shared group private key, each group message is individually encrypted and sent to group members, which is not ideal for large groups. After testing, the 0xchat app, with a multi-threading approach, can support private groups well with fewer than 200 members.
+Since our private group chats do not use a shared group private key, each group message is individually encrypted and sent to group members. This approach is not ideal for large groups. After testing, we found that the 0xchat app, using a multi-threading approach, can support private groups well with fewer than 100 members.
+
+**Relay Group**
+
+For open/closed groups, we implemented [NIP-29](https://github.com/nostr-protocol/nips/blob/master/29.md). In an open group, anyone can join, while in a closed group, administrative approval is required. Group owners or administrators can manage permissions, add or remove group members, and send group notes. This setup supports large group chats.
+
+Although non-group members cannot retrieve group messages, relay group messages are not encrypted. If content privacy is needed, please create a private group.
 
 **Open Channels**
 
@@ -84,7 +90,8 @@ Some important planned features:
 - [x] P2P audio/video calling
 - [x] Private group
 - [x] Cashu wallet Integration
+- [x] Public/Private notes
+- [x] Open/Closed groups
 - [ ] Audio/video chat room
-- [ ] Private notes
 - [ ] Desktop&Tablets versions
 
