@@ -23,17 +23,17 @@ As a chat client based on the [Nostr protocol](https://github.com/nostr-protocol
 
 Currently, we support three types of direct messages (DMs), Please review the provided links for a deeper understanding of each DM type:
 
-- [NIP-04 DM](https://github.com/nostr-protocol/nips/blob/master/04.md)
+- NIP-04 DM
 
-NIP-04 DM is the most widely used DM type in nostr, but it is not our recommended option currently because NIP-04 is not private in terms of DMs. Even though the content is encrypted, it leaks a lot of metadata. We do not use this DM type by default but are compatible with NIP-04 DM from other nostr clients.
+[NIP-04 DM](https://github.com/nostr-protocol/nips/blob/master/04.md) is the most widely used DM type in nostr, but it is not our recommended option currently because NIP-04 is not private in terms of DMs. Even though the content is encrypted, it leaks a lot of metadata. We do not use this DM type by default but are compatible with NIP-04 DM from other nostr clients.
 
-- [Gift-Wrapped DM](https://github.com/nostr-protocol/nips/blob/master/17.md)
+- Gift-Wrapped DM
 
-This is our default and recommended DM type. By using Gift-Wrapped for event messages, it minimizes metadata leakage. Not only is the message content encrypted, but the sender and the timestamp are also concealed. Moreover, the encryption algorithm employed is the latest audited [NIP-44](https://github.com/nostr-protocol/nips/blob/master/44.md) algorithm.
+[Gift-Wrapped DM](https://github.com/nostr-protocol/nips/blob/master/17.md) is our default and recommended DM type. By using Gift-Wrapped for event messages, it minimizes metadata leakage. Not only is the message content encrypted, but the sender and the timestamp are also concealed. Moreover, the encryption algorithm employed is the latest audited [NIP-44](https://github.com/nostr-protocol/nips/blob/master/44.md) algorithm.
 
-- [Secret DM](https://github.com/0xchat-app/0xchat-core/blob/main/doc/secretChat.md)
+- Secret DM
 
-Secret Chat is our third DM type, an extension of the Gift-Wrapped DM. Since Gift-Wrapped DM does not support forward secrecy, if a user's private key is compromised, all DM messages could be recovered. Therefore, we added a [NIP-101](https://github.com/water783/nips/blob/nip101/101.md) key exchange protocol to ensure each message session uses a different receiver key, securing forward secrecy. Additionally, we have incorporated the option to select a fixed relay for these sessions, allowing messages to be transmitted through a single trusted relay for both parties.
+[Secret Chat](https://github.com/0xchat-app/0xchat-core/blob/main/doc/secretChat.md) is our third DM type, an extension of the Gift-Wrapped DM. Since Gift-Wrapped DM does not support forward secrecy, if a user's private key is compromised, all DM messages could be recovered. Therefore, we added a [NIP-101](https://github.com/water783/nips/blob/nip101/101.md) key exchange protocol to ensure each message session uses a different receiver key, securing forward secrecy. Additionally, we have incorporated the option to select a fixed relay for these sessions, allowing messages to be transmitted through a single trusted relay for both parties.
 
 If you wish to recover your private chat messages on a different Nostr client or new device, we recommend using our default Gift-Wrapped DM. For more confidential conversations, you can initiate a Secret Chat with your friend, which requires their consent to establish a secret chat session. Please note that without backing up your chat database, you cannot retrieve historical messages if you switch devices or Nostr clients.
 
